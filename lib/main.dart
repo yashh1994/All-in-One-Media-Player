@@ -19,8 +19,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //home: Homepage(),
-      home: VideoPlayerScreen(videoPath: "/storage/emulated/0/Download/Telegram/narut o.mp4",)
+      home: Homepage(),
+      //home: VideoPlayerScreen(videoPath: "/storage/emulated/0/Download/Telegram/narut o.mp4",)
     );
   }
 }
