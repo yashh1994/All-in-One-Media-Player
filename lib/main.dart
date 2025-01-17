@@ -9,6 +9,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'Globals.dart';
+import 'VideoPage/videopage.dart';
 
 void main() {
   MediaKit.ensureInitialized();
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Homepage(),
+      home: VideoPage(),
+      //home: Homepage(),
       //home: VideoPlayerScreen(videoPath: "/storage/emulated/0/Download/Telegram/narut o.mp4",)
     );
   }
