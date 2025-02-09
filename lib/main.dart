@@ -7,7 +7,6 @@ import 'package:media_kit/media_kit.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'Globals.dart';
 import 'VideoPage/videopage.dart';
 
@@ -81,7 +80,9 @@ class _VideoListScreenState extends State<VideoListScreen> {
 
     return mp4AndMkvFiles;
   }
-  Future<void> _searchDirectory(Directory directory, List<String> mp4AndMkvFiles) async {
+
+  Future<void> _searchDirectory(
+      Directory directory, List<String> mp4AndMkvFiles) async {
     final List<FileSystemEntity> entities = await directory.list().toList();
 
     for (final entity in entities) {
@@ -106,13 +107,13 @@ class _VideoListScreenState extends State<VideoListScreen> {
       body: isLoading
           ? Center(child: CircularProgressIndicator())
           : ListView.builder(
-        itemCount: videoPaths.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(videoPaths[index]),
-          );
-        },
-      ),
+              itemCount: videoPaths.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text(videoPaths[index]),
+                );
+              },
+            ),
     );
   }
 }
